@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная I'm Bek</title>
-  <link rel="icon" href="images/bek.jpg" type="image/x-icon">
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+window.yaContextCb.push(()=>{
+	Ya.Context.AdvManager.render({
+		"blockId": "R-A-3718920-1",
+		"type": "floorAd",
+		"platform": "desktop"
+	})
+})
+</script>
 <img id="logo" src="images/logo.jpg" alt="logo" width="64" height="64">
 <a href="welcome.html" class="button project-links login-button" id="header-h123">Войти</a>
 <a href="welcome.html" class="button project-links login-button1" id="header-h123">Профиль</a>
 <a href="index.html" class="button project-links login-button2" id="header-h123">Главная</a>
+<a href="donate.html" class="button project-links login-button3" id="header-h123">Пожертвование</a>
   
   <header>
     <h1 id="header-h123">Конфа I'm Bek</h1>
@@ -41,7 +53,7 @@
     </main>
 
   <footer>
-    <p id="footer-p">&copy; 2023 I'm Bek. Все права защищены. Сделано с любовью <b>@imbek</b>. <b>Под поддержкой Markovka Squad</b>
+    <p id="footer-p">&copy; 2023 <b>I'm Bek</b>. Все права защищены. Сделано с любовью <b>@imbek</b>. <b>Под поддержкой Markovka Squad</b>
 	</p>
   </footer>
 </body>
