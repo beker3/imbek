@@ -137,3 +137,33 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.login-button1 {
+	font-family: "calibri";
+    position: fixed;
+    top: 20px;
+    right: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button2 {
+	font-family: "calibri";
+	position: fixed;
+	top: 20px;
+    right: 500px;
+	padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button3 {
+	font-family: "calibri";
+	position: fixed;
+	top: 20px;
+    right: 300px;
+	padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
