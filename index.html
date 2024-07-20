@@ -1,72 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script>window.yaContextCb=window.yaContextCb||[]</script>
-  <script src="https://yandex.ru/ads/system/context.js" async></script>
-  <script>window.yaContextCb=window.yaContextCb||[]</script>
-  <script src="https://yandex.ru/ads/system/context.js" async></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная I'm Bek</title>
-  <link rel="icon" href="images/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>I'm Bek | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-3718920-2",
-		"type": "floorAd",
-		"platform": "touch"
-	})
-})
-</script>
-<script>
-window.yaContextCb.push(()=>{
-	Ya.Context.AdvManager.render({
-		"blockId": "R-A-3718920-1",
-		"type": "floorAd",
-		"platform": "desktop"
-	})
-})
-</script>
-<img id="logo" src="images/logo.jpg" alt="logo" width="64" height="64">
-<a href="welcome.html" class="button project-links login-button" id="header-h123">Войти</a>
-<a href="welcome.html" class="button project-links login-button1" id="header-h123">Профиль</a>
-<a href="index.html" class="button project-links login-button2" id="header-h123">Главная</a>
-<a href="donate.html" class="button project-links login-button3" id="header-h123">Пожертвование</a>
-  
-  <header>
-    <h1 id="header-h123">Конфа I'm Bek</h1>
-	<p id="header-h125"> Данный сайт создан для введения блога , тут будут новости и т.д </p>
-  </header> 
-
-  <main>
-    <h2 id="header-h2">Привет, мир!</h2>
-    <p id="header-p">Это мой красивый сайт. Здесь будут новости обо мне и блоги.</p>
-        <h3 id="main-h3">Мои проекты</h3>
-        <div class="project-list">
-            <div class="project">
-                <img src="images/bek.jpg" alt="logo" class="project-image" width="64" height="64">
-                <p class="project-languages">HTML, CSS</p>
-                <div class="project-name"><h4>Этот сайт</h4></div>
-                <div class="project-description"><p>Мой блог , портфолио</p></div>
-                <a href="index.html" class="button project-links" id="header-h123">Сайт =&gt;</a>
-            </div>
-            <div class="project">
-                <img src="images/squad.png" alt="logo" class="project-image" width="64" height="64">
-                <p class="project-languages">DISCORD</p>
-                <div class="project-name"><h4>Morkovka Squad</h4></div>
-                <div class="project-description"><p>Наш сквад друзей</p></div>
-                <a href="https://discord.gg/yPT8zc6UDM" class="button project-links" id="header-h123">Дискорд =&gt;</a>
+    <div class="header">
+        <div class="image"><img src="img/logo.png" alt="I'm Bek Logo"></div>
+        <div class="language-selector">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+    </div>
+    
+    <div class="content" data-lang="en">
+        <div class="title" data-aos="fade-up" data-aos-anchor-placement="top-bottom">I'm Bek Portfolio</div>
+        <div class="port" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h1>About Me</h1>
+            <div class="solid"></div>
+            <h2>
+                    Hello! I am an experienced programmer and creative designer with a robust background spanning over two years in programming. I have worked extensively with a range of languages including 
+                    C#, 
+                    <i class="fab fa-java" title="Java"></i>, 
+                    <i class="fab fa-js-square" title="JavaScript"></i>, 
+                    <i class="fab fa-python" title="Python"></i>,
+                    Lua, 
+                    and
+                    BDFD, 
+                    tackling diverse and complex projects that have honed my technical skills and problem-solving abilities.
+                    <br><br>
+                    In the past year, I've expanded my expertise into the realm of design, where I have been passionately involved in creating visually compelling solutions using Adobe Photoshop. My design work blends creativity with technical precision, allowing me to deliver unique and impactful visual experiences across various projects.
+                    <br><br>
+                    My dual expertise in programming and design enables me to approach projects from a holistic perspective, integrating both technical functionality and aesthetic appeal. Whether working on intricate code or crafting stunning visual elements, I am committed to excellence and innovation in every aspect of my work.
+            </h2>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h1>My Projects</h1>
+            <div class="solid"></div>
+            <h2>This is just a portion of my public projects currently.</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="img/rink.png" alt="Rink AI Bot" style="border-radius: 26px;">
+                    <div class="solid"></div>
+                    <h1>Rink AI</h1>
+                    <div class="solid"></div>
+                    <p class="tech-stack"><i class="fab fa-python fa-2x" title="Python"></i></p>
+                    <p class="description">Discord bot AI based on ChatGPT.</p>
+                    <a class="github-button" target="_blank" rel="noopener noreferrer" href="https://discord.gg/vqJ4J2JWUj">Discord</a>
+                </div>
             </div>
         </div>
-    </main>
+        <div class="contact">
+            <h1>Contact Me</h1>
+            <div class="solid"></div>
+            <div class="contact-details">
+                <a href="https://discord.com/users/yourusername" class="contact-link" target="_blank" rel="noopener noreferrer">Discord</a>
+            </div>
+        </div>
+        <footer>
+            <p>Created is love by <span class="highlight">imbek</span>. All rights reserved &copy; 2024. ツ</p>
+        </footer>
+    </div>
 
-  <footer>
-    <p id="footer-p">&copy; 2023 <b>I'm Bek</b>. Все права защищены. Сделано с любовью <b>@imbek</b>. <b>Под поддержкой Markovka Squad</b>
-	</p>
-  </footer>
+    <div class="content" data-lang="ru" style="display: none;">
+        <div class="title">I'm Bek Портфолио</div>
+        <div class="port">
+            <h1>Обо мне</h1>
+            <div class="solid"></div>
+            <h2>
+                Привет! Я опытный программист и креативный дизайнер с солидным опытом более двух лет в программировании. Я работал с различными языками, включая 
+                C#, 
+                <i class="fab fa-java" title="Java"></i>, 
+                <i class="fab fa-js-square" title="JavaScript"></i>, 
+                <i class="fab fa-python" title="Python"></i>,
+                Lua, 
+                и
+                BDFD, 
+                занимаясь разнообразными и сложными проектами, что позволило мне отточить свои технические навыки и способности к решению проблем.
+                <br><br>
+                За последний год я расширил свои знания в области дизайна, где активно занимаюсь созданием визуально привлекательных решений с использованием Adobe Photoshop. Моя дизайнерская работа сочетает в себе креативность и техническую точность, что позволяет мне создавать уникальные и впечатляющие визуальные решения для различных проектов.
+                <br><br>
+                Мое сочетание навыков в программировании и дизайне позволяет мне подходить к проектам с комплексной точки зрения, объединяя техническую функциональность и эстетическую привлекательность. Будь то сложный код или создание потрясающих визуальных элементов, я стремлюсь к совершенству и инновациям в каждом аспекте своей работы.
+            </h2>
+        </div>
+        <div class="project">
+            <h1>Мои проекты</h1>
+            <div class="solid"></div>
+            <h2>Это лишь часть моих публичных проектов на данный момент.</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="img/rink.png" alt="Rink AI Bot" style="border-radius: 26px;">
+                    <div class="solid"></div>
+                    <h1>Rink AI</h1>
+                    <div class="solid"></div>
+                    <p class="tech-stack"><i class="fab fa-python fa-2x" title="Python"></i></p>
+                    <p class="description">Discord бот ИИ на базе ChatGPT.</p>
+                    <a class="github-button" target="_blank" rel="noopener noreferrer" href="https://discord.gg/vqJ4J2JWUj">Discord</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h1>Связаться со мной</h1>
+            <div class="solid"></div>
+            <div class="contact-details">
+                <a href="https://discord.com/users/953290060445413386" class="contact-link" target="_blank" rel="noopener noreferrer">Discord</a>
+            </div>
+        </div>
+        <footer>
+            <p>Создано с любовью <span class="highlight">imbek</span>. Все права защищены &copy; 2024. ツ</p>
+        </footer>
+    </div>
+
+    <script src="lang-switcher.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700, // Продолжительность анимации в миллисекундах
+            easing: 'ease-in-out', // Плавность анимации
+            once: true // Анимация будет выполнена только один раз
+        });
+    </script>
 </body>
 </html>
