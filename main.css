@@ -1,0 +1,383 @@
+/* Общие стили */
+:root {
+    --primary-bg: #1e1e2c; /* Темный фон страницы */
+    --secondary-bg: #2e2e3b; /* Светлее фон контейнеров */
+    --accent-color: #5a4cf1; /* Акцентный цвет */
+    --text-color: #e0e0e0; /* Цвет текста */
+    --border-color: #3a3a4e; /* Цвет бордюров */
+    --button-bg: #5a4cf1; /* Цвет кнопок */
+    --button-hover-bg: #3e2dbb; /* Цвет кнопок при наведении */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(24,24,61);
+	background: linear-gradient(120deg, rgba(24,24,61,1) 0%, rgba(30,30,44,1) 100%);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+/* Логотип */
+.image {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Заголовки */
+.title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 20px 0;
+}
+
+/* Контейнеры */
+.port, .project {
+    border-radius: 20px;
+    border: solid 4px var(--border-color);
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.port h1, .project h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 20px 0;
+}
+
+.port h2, .project h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Разделитель */
+.solid {
+    background-color: var(--accent-color);
+    height: 4px;
+    width: 80%;
+    border: none;
+    margin: 20px auto;
+    box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* Кнопки и ссылки */
+.github-button, .project-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.github-button:hover, .project-card a:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Карточка проекта */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2a2a35;
+    border: solid 4px var(--border-color);
+    border-radius: 20px;
+    min-width: 200px;
+    max-width: 200px;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 4px var(--border-color);
+    margin-top: 10px;
+}
+
+.project-card h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.project-card h2 {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.tech-stack {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 5px 0; /* Adjust the margin to bring it closer to the .solid element */
+}
+
+.description {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .port h1, .project h1 {
+        font-size: 28px;
+    }
+
+    .port h2, .project h2 {
+        font-size: 16px;
+    }
+
+    .project-card {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .project-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .github-button, .project-card a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .port, .project {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .port h1, .project h1 {
+        font-size: 24px;
+    }
+
+    .port h2, .project h2 {
+        font-size: 14px;
+    }
+
+    .project-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .project-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .github-button, .project-card a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .port, .project {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+
+/* Стили для футера */
+footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    border-top: solid 4px var(--border-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Адаптивность футера */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* Стили для выделения текста */
+.highlight {
+    color: #fff; /* Белый цвет текста */
+    font-weight: 700; /* Жирное начертание */
+}
+
+/* Контейнер связи */
+.contact {
+    border-radius: 20px;
+    border: solid 4px var(--border-color);
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 20px 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column; /* Выравнивание кнопок по вертикали */
+    align-items: center; /* Центрирование кнопок по горизонтали */
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0; /* Отступ между кнопками */
+    transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .contact {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact h1 {
+        font-size: 28px;
+    }
+
+    .contact-link {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .contact h1 {
+        font-size: 24px;
+    }
+
+    .contact-link {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+    height: 12px; /* Высота горизонтального скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--secondary-bg); /* Цвет фона трека скроллбара */
+    border-radius: 10px; /* Скругление углов трека */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color); /* Цвет ползунка скроллбара */
+    border-radius: 10px; /* Скругление углов ползунка */
+    border: 2px solid var(--border-color); /* Цвет бордюра вокруг ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover-bg); /* Цвет ползунка при наведении */
+}
+
+/* Стили для заголовка и переключателя языка */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.language-selector {
+    margin-left: 80px;
+    margin-top: 10px;
+    z-index: 500;
+}
+
+.lang-btn {
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.lang-btn:hover {
+    background-color: var(--button-hover-bg);
+}
