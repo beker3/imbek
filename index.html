@@ -2,127 +2,364 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>I'm Bek | Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@imbek</title>
+    <meta name="author" content="imbek">
+    <meta name="description" content="Personal profile card for @imbek. Python, Node.js, Web Developer, and Bot Creator.">
+    <meta name="keywords" content="imbek, profile, portfolio, developer, python, nodejs, web developer, bot creator, javascript, профиль, портфолио, разработчик, питон, нода, веб-разработчик, создание ботов, имбек, бек, бекер, бекер2">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="@imbek - Profile Card">
+    <meta property="og:description" content="Python, Node.js, Web Developer, and Bot Creator.">
+    <meta property="og:image" content="https://yourdomain.com/profile.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
 </head>
 <body>
-    <div class="header">
-        <div class="image"><img src="img/logo.png" alt="I'm Bek Logo"></div>
-        <div class="language-selector">
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="ru">RU</button>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="profile-card" id="card">
+            <img src="profile.jpg" alt="Profile" class="profile-image">
+            <h1 class="username">@imbek</h1>
+            <div class="typing-container">
+                <span id="typing-text" class="typing"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="social-links">
+                <a href="https://discordapp.com/users/953290060445413386" class="social-link" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://github.com/beker3" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561199577801084/" class="social-link" target="_blank">
+                    <i class="fab fa-steam"></i>
+                </a>
+            </div>
+            <div class="button-container">
+                <button class="carrot-button" id="carrotButton">
+                    <span class="button-text">Contact Me</span>
+                    <span class="button-loader"></span>
+                    <span class="button-shine"></span>
+                </button>
+                <div id="particles"></div>
+            </div>
         </div>
     </div>
-    
-    <div class="content" data-lang="en">
-        <div class="title" data-aos="fade-up" data-aos-anchor-placement="top-bottom">I'm Bek Portfolio</div>
-        <div class="port" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <h1>About Me</h1>
-            <div class="solid"></div>
-            <h2>
-                    Hello! I am an experienced programmer and creative designer with a robust background spanning over two years in programming. I have worked extensively with a range of languages including 
-                    C#, 
-                    <i class="fab fa-java" title="Java"></i>, 
-                    <i class="fab fa-js-square" title="JavaScript"></i>, 
-                    <i class="fab fa-python" title="Python"></i>,
-                    Lua, 
-                    and
-                    BDFD, 
-                    tackling diverse and complex projects that have honed my technical skills and problem-solving abilities.
-                    <br><br>
-                    In the past year, I've expanded my expertise into the realm of design, where I have been passionately involved in creating visually compelling solutions using Adobe Photoshop. My design work blends creativity with technical precision, allowing me to deliver unique and impactful visual experiences across various projects.
-                    <br><br>
-                    My dual expertise in programming and design enables me to approach projects from a holistic perspective, integrating both technical functionality and aesthetic appeal. Whether working on intricate code or crafting stunning visual elements, I am committed to excellence and innovation in every aspect of my work.
-            </h2>
-        </div>
-        <div class="project" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <h1>My Projects</h1>
-            <div class="solid"></div>
-            <h2>This is just a portion of my public projects currently.</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="img/rink.png" alt="Rink AI Bot" style="border-radius: 26px;">
-                    <div class="solid"></div>
-                    <h1>Rink AI</h1>
-                    <div class="solid"></div>
-                    <p class="tech-stack"><i class="fab fa-python fa-2x" title="Python"></i></p>
-                    <p class="description">Discord bot AI based on ChatGPT.</p>
-                    <a class="github-button" target="_blank" rel="noopener noreferrer" href="https://discord.gg/vqJ4J2JWUj">Discord</a>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <h1>Contact Me</h1>
-            <div class="solid"></div>
-            <div class="contact-details">
-                <a href="https://discord.com/users/yourusername" class="contact-link" target="_blank" rel="noopener noreferrer">Discord</a>
-            </div>
-        </div>
-        <footer>
-            <p>Created is love by <span class="highlight">imbek</span>. All rights reserved &copy; 2024. ツ</p>
-        </footer>
+    <div class="love-text">
+        <span>&copy; <span id="copyright-year"></span> imbek. All rights reserved.</span>
     </div>
 
-    <div class="content" data-lang="ru" style="display: none;">
-        <div class="title">I'm Bek Портфолио</div>
-        <div class="port">
-            <h1>Обо мне</h1>
-            <div class="solid"></div>
-            <h2>
-                Привет! Я опытный программист и креативный дизайнер с солидным опытом более двух лет в программировании. Я работал с различными языками, включая 
-                C#, 
-                <i class="fab fa-java" title="Java"></i>, 
-                <i class="fab fa-js-square" title="JavaScript"></i>, 
-                <i class="fab fa-python" title="Python"></i>,
-                Lua, 
-                и
-                BDFD, 
-                занимаясь разнообразными и сложными проектами, что позволило мне отточить свои технические навыки и способности к решению проблем.
-                <br><br>
-                За последний год я расширил свои знания в области дизайна, где активно занимаюсь созданием визуально привлекательных решений с использованием Adobe Photoshop. Моя дизайнерская работа сочетает в себе креативность и техническую точность, что позволяет мне создавать уникальные и впечатляющие визуальные решения для различных проектов.
-                <br><br>
-                Мое сочетание навыков в программировании и дизайне позволяет мне подходить к проектам с комплексной точки зрения, объединяя техническую функциональность и эстетическую привлекательность. Будь то сложный код или создание потрясающих визуальных элементов, я стремлюсь к совершенству и инновациям в каждом аспекте своей работы.
-            </h2>
-        </div>
-        <div class="project">
-            <h1>Мои проекты</h1>
-            <div class="solid"></div>
-            <h2>Это лишь часть моих публичных проектов на данный момент.</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="img/rink.png" alt="Rink AI Bot" style="border-radius: 26px;">
-                    <div class="solid"></div>
-                    <h1>Rink AI</h1>
-                    <div class="solid"></div>
-                    <p class="tech-stack"><i class="fab fa-python fa-2x" title="Python"></i></p>
-                    <p class="description">Discord бот ИИ на базе ChatGPT.</p>
-                    <a class="github-button" target="_blank" rel="noopener noreferrer" href="https://discord.gg/vqJ4J2JWUj">Discord</a>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <h1>Связаться со мной</h1>
-            <div class="solid"></div>
-            <div class="contact-details">
-                <a href="https://discord.com/users/953290060445413386" class="contact-link" target="_blank" rel="noopener noreferrer">Discord</a>
-            </div>
-        </div>
-        <footer>
-            <p>Создано с любовью <span class="highlight">imbek</span>. Все права защищены &copy; 2024. ツ</p>
-        </footer>
-    </div>
-
-    <script src="lang-switcher.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 700, // Продолжительность анимации в миллисекундах
-            easing: 'ease-in-out', // Плавность анимации
-            once: true // Анимация будет выполнена только один раз
+        const card = document.getElementById('card');
+        const container = document.querySelector('.container');
+
+        // Настройки эффекта
+        const settings = {
+            perspective: 1000,    // Глубина перспективы
+            scale: 1.02,         // Уменьшили масштаб при наведении
+            maxTilt: 7,          // Уменьшили максимальный угол поворота
+            transitionSpeed: 400, // Скорость возврата в исходное положение
+            initialTransition: 200 // Увеличили скорость первого перехода для большей плавности
+        };
+
+        let isFirstMove = true;
+        let timeoutId = null;
+        let currentX = 0;
+        let currentY = 0;
+
+        // Функция плавной интерполяции
+        function lerp(start, end, factor) {
+            return start + (end - start) * factor;
+        }
+
+        // Функция применения трансформации
+        function applyTransform(rotateX, rotateY, scale, transition = false) {
+            if (transition) {
+                card.style.transition = `transform ${settings.initialTransition}ms ease-out`;
+            }
+            
+            // Плавная интерполяция углов поворота
+            currentX = lerp(currentX, rotateX, 0.1);
+            currentY = lerp(currentY, rotateY, 0.1);
+            
+            card.style.transform = `
+                perspective(${settings.perspective}px)
+                rotateX(${currentX}deg)
+                rotateY(${currentY}deg)
+                scale(${scale})
+            `;
+
+            // Сбрасываем transition после применения
+            if (transition) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    card.style.transition = 'none';
+                }, settings.initialTransition);
+            }
+        }
+
+        // Обработчик движения мыши
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            const mouseX = e.clientX - centerX;
+            const mouseY = e.clientY - centerY;
+            
+            const rotateX = (mouseY / (rect.height / 2)) * -settings.maxTilt;
+            const rotateY = (mouseX / (rect.width / 2)) * settings.maxTilt;
+            
+            // Применяем transition только при первом движении
+            applyTransform(rotateX, rotateY, settings.scale, isFirstMove);
+            isFirstMove = false;
+
+            // Запускаем анимационный цикл
+            if (!isFirstMove) {
+                requestAnimationFrame(() => {
+                    applyTransform(rotateX, rotateY, settings.scale, false);
+                });
+            }
         });
+
+        // Возвращаем карточку в исходное положение
+        container.addEventListener('mouseleave', () => {
+            card.style.transition = `transform ${settings.transitionSpeed}ms ease-out`;
+            currentX = 0;
+            currentY = 0;
+            applyTransform(0, 0, 1);
+            isFirstMove = true;
+        });
+
+        // При первом входе мыши на контейнер
+        container.addEventListener('mouseenter', (e) => {
+            isFirstMove = true;
+        });
+
+        // Typing animation
+        const texts = [
+            "Python Developer",
+            "Node.js Developer",
+            "Web Developer",
+            "Bot Creator (TG/DS)"
+        ];
+        
+        const typingText = document.getElementById('typing-text');
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isWaiting = false;
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isWaiting = true;
+                setTimeout(() => {
+                    isDeleting = true;
+                    isWaiting = false;
+                }, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            const typingSpeed = isDeleting ? 50 : isWaiting ? 1500 : 100;
+            setTimeout(type, typingSpeed);
+        }
+
+        type();
+
+        // Button Interaction
+        const carrotButton = document.getElementById('carrotButton');
+        const particlesContainer = document.getElementById('particles'); // Renamed variable for clarity
+        const discordLink = 'https://discordapp.com/users/953290060445413386'; // Store link here
+
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Случайное положение вокруг точки клика
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 2 + Math.random() * 3;
+            const size = 10 + Math.random() * 10;
+            const spread = 30; // Разброс частиц
+            
+            // Добавляем случайное смещение для более естественного разброса
+            const startX = x + (Math.random() - 0.5) * spread;
+            const startY = y + (Math.random() - 0.5) * spread;
+            
+            particle.style.left = startX + 'px';
+            particle.style.top = startY + 'px';
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            
+            particlesContainer.appendChild(particle); // Use renamed variable
+            
+            // Анимация движения
+            let posX = startX;
+            let posY = startY;
+            let alpha = 1;
+            let scale = 1;
+            
+            function animate() {
+                posX += Math.cos(angle) * velocity;
+                posY += Math.sin(angle) * velocity - 2;
+                alpha -= 0.02;
+                scale -= 0.01;
+                
+                particle.style.transform = `translate(${posX - startX}px, ${posY - startY}px) scale(${scale})`;
+                particle.style.opacity = alpha;
+                
+                if (alpha > 0) {
+                    requestAnimationFrame(animate);
+                } else {
+                    particle.remove();
+                }
+            }
+            
+            requestAnimationFrame(animate);
+        }
+
+        carrotButton.addEventListener('click', (e) => {
+            // Prevent multiple clicks during animation
+            if (carrotButton.classList.contains('loading')) {
+                return;
+            }
+
+            // Add loading state
+            carrotButton.classList.add('loading');
+
+            // --- Particle Creation Logic --- 
+            const rect = carrotButton.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+            
+            // Create particles at the click position
+            for (let i = 0; i < 15; i++) {
+                createParticle(clickX, clickY);
+            }
+            // --- End Particle Creation --- 
+
+            // Wait for animation, then navigate
+            setTimeout(() => {
+                window.open(discordLink, '_blank');
+                // Remove loading state after navigation attempt
+                carrotButton.classList.remove('loading'); 
+            }, 1500); // Wait 1.5 seconds (adjust as needed)
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.2,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.1,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.3
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+    <script>
+        // Set Copyright Year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
