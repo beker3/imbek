@@ -52,4 +52,4 @@
 
 ---
 
-Создано с ❤️ @imbek
+Created with ❤️ @imbek
