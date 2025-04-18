@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="profile.ico" type="image/x-icon">
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
 </head>
 <body>
     <div id="particles-js"></div>
@@ -58,6 +58,12 @@
         const card = document.getElementById('card');
         const container = document.querySelector('.container');
 
+        // Detect Firefox and add a class to body
+        if (navigator.userAgent.toLowerCase().includes('firefox')) {
+            document.body.classList.add('firefox-browser');
+            console.log("Firefox detected, disabling tilt effect."); // Для отладки
+        }
+
         // Настройки эффекта
         const settings = {
             perspective: 1000,    // Глубина перспективы
@@ -79,13 +85,19 @@
 
         // Функция применения трансформации
         function applyTransform(rotateX, rotateY, scale, transition = false) {
+            const isFirefox = document.body.classList.contains('firefox-browser');
+
             if (transition) {
                 card.style.transition = `transform ${settings.initialTransition}ms ease-out`;
             }
             
+            // Use 0 for rotation if Firefox
+            const targetRotateX = isFirefox ? 0 : rotateX;
+            const targetRotateY = isFirefox ? 0 : rotateY;
+
             // Плавная интерполяция углов поворота
-            currentX = lerp(currentX, rotateX, 0.1);
-            currentY = lerp(currentY, rotateY, 0.1);
+            currentX = lerp(currentX, targetRotateX, 0.1);
+            currentY = lerp(currentY, targetRotateY, 0.1);
             
             card.style.transform = `
                 perspective(${settings.perspective}px)
