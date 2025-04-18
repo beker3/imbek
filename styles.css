@@ -286,11 +286,10 @@ body::before {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    transform: translateZ(20px);
-    pointer-events: auto;
-    text-decoration: none;
+    transform: translateZ(0);
     position: relative;
     z-index: 1;
+    pointer-events: auto;
 }
 
 .social-link:hover {
@@ -569,6 +568,7 @@ body::before {
     pointer-events: auto;
     position: relative;
     z-index: 1;
+    transform: translateZ(0);
 }
 
 .carrot-button::before {
