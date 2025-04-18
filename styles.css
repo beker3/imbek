@@ -289,6 +289,8 @@ body::before {
     transform: translateZ(20px);
     pointer-events: auto;
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
 .social-link:hover {
@@ -393,7 +395,6 @@ body::before {
 
 .profile-card > * {
     transform-style: preserve-3d;
-    pointer-events: none;
 }
 
 .profile-image {
@@ -411,6 +412,7 @@ body::before {
     position: relative;
     animation: fadeInUp 0.6s ease-out forwards;
     animation-delay: 0.1s;
+    pointer-events: none;
 }
 
 .profile-image::after {
@@ -451,6 +453,7 @@ body::before {
     display: inline-block;
     animation: fadeInUp 0.6s ease-out forwards;
     animation-delay: 0.2s;
+    pointer-events: none;
 }
 
 .username::after {
@@ -563,6 +566,9 @@ body::before {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .carrot-button::before {
@@ -629,6 +635,7 @@ body::before {
     overflow: hidden;
     animation: fadeInUp 0.6s ease-out forwards;
     animation-delay: 0.3s;
+    pointer-events: none;
 }
 
 .typing-container::before {
