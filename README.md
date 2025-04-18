@@ -1,6 +1,6 @@
 # Profile Card - @imbek
 
-![Profile Card Screenshot](placeholder.png) <!-- Замените placeholder.png на реальный скриншот или GIF вашего сайта! -->
+![Profile Card Screenshot](placeholders.png) <!-- Замените placeholder.png на реальный скриншот или GIF вашего сайта! -->
 
 ## 🌟 Обзор
 
